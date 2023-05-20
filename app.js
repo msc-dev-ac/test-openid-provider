@@ -6,7 +6,11 @@ const port = process.env.PORT || 3001
 app.use(morgan('dev'))
 
 app.get("/", (req, res) => {
-    res.type('html').send('hello world')
+    console.log(JSON.stringify(req.headers));
+    res.json({
+        "sub": "test",
+        "nickname": "TestPlayer"
+    })
 })
 
 app.listen(port, () => {
