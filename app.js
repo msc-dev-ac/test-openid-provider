@@ -6,7 +6,7 @@ const port = process.env.PORT || 3001
 app.use(morgan('dev'))
 
 app.get("/", (req, res) => {
-    console.log(JSON.stringify(req.headers));
+    console.log(req.header('authorization'))
     res.json({
         "sub": "test",
         "nickname": "TestPlayer"
