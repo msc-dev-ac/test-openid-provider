@@ -9,8 +9,8 @@ app.get("/", (req, res) => {
     console.log(JSON.stringify(req.headers))
     console.log(req.header('authorization'))
     res.json({
-        "sub": "test2",
-        "nickname": "TestPlayer2"
+        "sub": "test",
+        "nickname": "TestPlayer"
     })
 })
 
